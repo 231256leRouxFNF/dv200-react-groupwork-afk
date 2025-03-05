@@ -1,38 +1,28 @@
+/* App Global Styles */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #121212;
   min-height: 100vh;
+  padding: 20px;
+}
+
+/* Fix .components-grid to Arrange Cards in a Row */
+.components-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* Centers cards in the container */
+  gap: 20px;
+  /* Adds space between the cards */
+  flex-wrap: wrap;
+  /* Ensures responsiveness for smaller screens */
+  margin: 20px auto;
+  max-width: 1000px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Responsive Layout: Stack Cards on Mobile */
+@media (max-width: 768px) {
+  .components-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
