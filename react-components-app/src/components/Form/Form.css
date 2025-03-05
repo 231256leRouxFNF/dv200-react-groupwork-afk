@@ -13,7 +13,8 @@
 }
 
 /* Input Field */
-.form input {
+.form input,
+.form textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -24,10 +25,13 @@
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease-in-out;
+    font-family: inherit;
+    resize: none; /* Optional: prevents resizing if you want it static */
 }
 
 /* Input Field Focus */
-.form input:focus {
+.form input:focus,
+.form textarea:focus {
     border-color: #4da8ff;
     box-shadow: 0 0 8px rgba(77, 168, 255, 0.6);
 }
@@ -84,3 +88,10 @@
         transform: translateY(0);
     }
 }
+.form-heading {
+    color: white; 
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
