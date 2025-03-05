@@ -2,22 +2,33 @@ import React, { useState } from "react";
 import "./Accordion.css";
 
 export default function Accordion() {
+  // State to track if the main section is open
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`accordion ${isOpen ? "open" : ""}`}>
-      <button onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? "Hide Section" : "Show Section"}
-        <span
-          style={{
-            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-            transition: "transform 0.3s ease",
-          }}
-        >
-          🔽
-        </span>
+    <div className="accordion">
+      {/* Main Accordion Button */}
+      <button className="accordion-toggle" onClick={() => setIsOpen(!isOpen)}>
+        Main Information {isOpen ? "▲" : "▼"}
       </button>
-      <div className="content">Accordion content goes here</div>
+
+      {/* Expanding Section with Two Options */}
+      {isOpen && (
+        <div className="accordion-content">
+          <button
+            className="sub-option"
+            onClick={() => console.log("Surfing Tips Clicked")}
+          >
+            Point 1
+          </button>
+          <button
+            className="sub-option"
+            onClick={() => console.log("Best Surf Spots Clicked")}
+          >
+            Point 2
+          </button>
+        </div>
+      )}
     </div>
   );
 }
