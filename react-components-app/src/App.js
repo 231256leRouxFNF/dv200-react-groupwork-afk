@@ -19,17 +19,17 @@ export default function App() {
 
       <div className="components-grid">
         <Card
-          imageUrl={Image1}
+          imageUrl="https://picsum.photos/id/1020/300/200"
           title="Card 1"
           description="This is the first card component"
         />
         <Card
-          imageUrl={Image2}
+          imageUrl="https://picsum.photos/id/1021/300/200"
           title="Card 2"
           description="This is the second card component"
         />
         <Card
-          imageUrl={Image3}
+          imageUrl="https://picsum.photos/id/1022/300/200"
           title="Card 3"
           description="This is the third card component"
         />
