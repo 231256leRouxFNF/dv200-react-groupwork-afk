@@ -30,6 +30,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 8px 8px 0 0;
+    margin-bottom: 5px;
 }
 
 /* Button Hover Effect */
@@ -45,6 +46,7 @@
     flex-direction: column;
     gap: 10px;
     animation: slideDown 0.3s ease-in-out;
+    margin-bottom: 10px;
 }
 
 /* Buttons Inside the Accordion */
