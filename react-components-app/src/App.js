@@ -8,8 +8,8 @@ import "./App.css";
 
 // Import images - adjust these paths/filenames to match your actual images
 import Image1 from './images/img-1.png';
-import Image2 from './images/img-1.png'; // Replace with actual different images if needed
-import Image3 from './images/img-1.png'; // Using same image for example
+import Image2 from './images/img-2.png'; // Replace with actual different images if needed
+import Image3 from './images/img-3.png'; // Using same image for example
 
 export default function App() {
   return (
