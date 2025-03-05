@@ -1,0 +1,64 @@
+/* Dark Background Theme */
+.accordion {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1e1e2e;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Accordion Button */
+.accordion button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button Hover Effect */
+.accordion button:hover {
+    background-color: #0056b3;
+}
+
+/* Accordion Content */
+.content {
+    padding: 15px;
+    background-color: #2a2a3b;
+    color: #cbd5e1;
+    border-radius: 0 0 8px 8px;
+    font-size: 16px;
+    display: none;
+}
+
+/* Show Content When Accordion is Open */
+.accordion.open .content {
+    display: block;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Smooth Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
