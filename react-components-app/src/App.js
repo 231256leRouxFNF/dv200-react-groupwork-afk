@@ -6,11 +6,6 @@ import Accordion from "./components/Accordion/Accordion";
 import Form from "./components/Form/Form";
 import "./App.css";
 
-// Import images - adjust these paths/filenames to match your actual images
-import Image1 from './images/img-1.png';
-import Image2 from './images/img-1.png'; // Replace with actual different images if needed
-import Image3 from './images/img-1.png'; // Using same image for example
-
 export default function App() {
   return (
     <div className="app">
@@ -35,7 +30,7 @@ export default function App() {
         />
       </div>
 
-      <Accordion />
+      <Accordion item1="Accordion content 1" item2="Accordion content 2" />
       <Form />
     </div>
   );
