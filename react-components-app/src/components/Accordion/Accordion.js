@@ -1,49 +1,34 @@
 import React, { useState } from "react";
 import "./Accordion.css";
 
-export default function Accordion({ item1, item2 }) {
-  const [isOpen1, setIsOpen1] = useState(false);
-  const [isOpen2, setIsOpen2] = useState(false);
+export default function Accordion() {
+  // State to track if the main section is open
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="accordion">
-      <div className={`accordion-section ${isOpen1 ? "open" : ""}`}>
-        <button onClick={() => setIsOpen1(!isOpen1)}>
-          {isOpen1 ? "Hide Section 1" : "Show Section 1"}
-          <span
-            style={{
-              transform: isOpen1 ? "rotate(180deg)" : "rotate(0deg)",
-              transition: "transform 0.3s ease",
-            }}
-          >
-            🔽
-          </span>
-        </button>
-        {isOpen1 && (
-          <div className="content">
-            <div>{item1}</div>
-          </div>
-        )}
-      </div>
+      {/* Main Accordion Button */}
+      <button className="accordion-toggle" onClick={() => setIsOpen(!isOpen)}>
+        Main Information {isOpen ? "▲" : "▼"}
+      </button>
 
-      <div className={`accordion-section ${isOpen2 ? "open" : ""}`}>
-        <button onClick={() => setIsOpen2(!isOpen2)}>
-          {isOpen2 ? "Hide Section 2" : "Show Section 2"}
-          <span
-            style={{
-              transform: isOpen2 ? "rotate(180deg)" : "rotate(0deg)",
-              transition: "transform 0.3s ease",
-            }}
+      {/* Expanding Section with Two Options */}
+      {isOpen && (
+        <div className="accordion-content">
+          <button
+            className="sub-option"
+            onClick={() => console.log("Surfing Tips Clicked")}
           >
-            🔽
-          </span>
-        </button>
-        {isOpen2 && (
-          <div className="content">
-            <div>{item2}</div>
-          </div>
-        )}
-      </div>
+            Point 1
+          </button>
+          <button
+            className="sub-option"
+            onClick={() => console.log("Best Surf Spots Clicked")}
+          >
+            Point 2
+          </button>
+        </div>
+      )}
     </div>
   );
 }
