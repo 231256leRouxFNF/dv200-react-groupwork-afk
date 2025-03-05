@@ -4,39 +4,47 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #1e1e2e;
+  background-color: #0F0F0F;
+  /* Deep Black */
   color: white;
   font-size: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.4);
+  position: relative;
+  z-index: 10;
 }
 
 /* Brand Name */
 .navbar h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #4da8ff;
+  color: #8B0116;
+  /* Red Accent */
+  text-transform: uppercase;
 }
 
 /* Dropdown Container */
 .dropdown {
   position: relative;
+  z-index: 15;
 }
 
 /* Dropdown Toggle Button */
 .dropdown-toggle {
-  background-color: #007bff;
+  background-color: #8B0116;
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 18px;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 /* Button Hover Effect */
 .dropdown-toggle:hover {
-  background-color: #0056b3;
+  background-color: #BF0202;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
 }
 
 /* Dropdown Menu */
@@ -44,8 +52,8 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background: #2a2a3b;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  background: #1A1A1A;
+  box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.4);
   border-radius: 5px;
   padding: 10px 0;
   width: 160px;
@@ -55,6 +63,8 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 20;
+  /* Ensure dropdown menu is above the carousel */
 }
 
 /* Show Menu When Open */
@@ -72,7 +82,7 @@
 
 /* Hover Effect on Dropdown Items */
 .dropdown-menu button:hover {
-  background-color: #007bff;
+  background-color: #8B0116;
 }
 
 /* Show Menu When Dropdown is Open */
