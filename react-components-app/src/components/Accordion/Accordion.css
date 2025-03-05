@@ -1,0 +1,88 @@
+/* ================================
+   Dark & Blue Themed Accordion
+   ================================ */
+
+.accordion {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1e1e2e;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main Accordion Button */
+.accordion-toggle {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Button Hover Effect */
+.accordion-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Expanding Content Section */
+.accordion-content {
+    background-color: #2a2a3b;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Buttons Inside the Accordion */
+.sub-option {
+    padding: 12px;
+    background-color: #4da8ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover & Click Effects on Sub-Options */
+.sub-option:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+}
+
+.sub-option:active {
+    transform: scale(0.98);
+}
+
+/* Show Content When Accordion is Open */
+.accordion.open .accordion-content {
+    display: flex;
+}
+
+/* Smooth Slide Down Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
