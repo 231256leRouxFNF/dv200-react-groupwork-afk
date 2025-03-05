@@ -1,17 +1,17 @@
-<<<<<<< Updated upstream
-import React from 'react';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import Card from './components/Card';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Carousel from "./components/Carousel/Carousel";
+import Card from "./components/Card/Card";
+import Accordion from "./components/Accordion/Accordion";
+import Form from "./components/Form/Form";
+import "./App.css";
 
 export default function App() {
   return (
     <div className="app">
       <Navbar />
       <Carousel />
-      
+
       <div className="components-grid">
         <Card
           imageUrl="https://picsum.photos/id/1020/300/200"
@@ -30,35 +30,8 @@ export default function App() {
         />
       </div>
 
-      {/* <Accordion /> */}
-      {/* <Form /> */}
+      <Accordion />
+      <Form />
     </div>
   );
 }
-=======
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
->>>>>>> Stashed changes
