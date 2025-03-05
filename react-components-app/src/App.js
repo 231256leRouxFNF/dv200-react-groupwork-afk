@@ -1,8 +1,10 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import Card from './components/Card';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Carousel from "./components/Carousel/Carousel";
+import Card from "./components/Card/Card";
+import Accordion from "./components/Accordion/Accordion";
+import Form from "./components/Form/Form";
+import "./App.css";
 
 // Import images - adjust these paths/filenames to match your actual images
 import Image1 from './images/img-1.png';
@@ -14,7 +16,7 @@ export default function App() {
     <div className="app">
       <Navbar />
       <Carousel />
-      
+
       <div className="components-grid">
         <Card
           imageUrl={Image1}
@@ -33,9 +35,8 @@ export default function App() {
         />
       </div>
 
-      {/* Uncomment these when components are ready */}
-      {/* <Accordion /> */}
-      {/* <Form /> */}
+      <Accordion />
+      <Form />
     </div>
   );
 }
