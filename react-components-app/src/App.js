@@ -5,7 +5,6 @@ import Card from "./components/Card/Card";
 import Accordion from "./components/Accordion/Accordion";
 import Form from "./components/Form/Form";
 import "./App.css";
-import Home from "./pages/index";  // Correct import for index.js inside pages/
 
 // Import images - adjust these paths/filenames to match your actual images
 import Image1 from './images/img-1.png';
@@ -15,7 +14,6 @@ import Image3 from './images/img-3.png'; // Using same image for example
 export default function App() {
   return (
     <div className="app">
-      <Navbar />
       <Carousel />
 
       <div className="components-grid">
