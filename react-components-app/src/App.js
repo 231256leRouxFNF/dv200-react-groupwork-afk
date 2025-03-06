@@ -27,6 +27,7 @@ export default function App() {
       <div className="components-grid">
         <Card
           imageUrl={Image1}
+<<<<<<< HEAD
           title="Engines"
           description="2.3L EcoBoost (315 HP) or 5.0L Coyote V8 (486 HP) in GT trim."
         />
@@ -39,6 +40,20 @@ export default function App() {
           imageUrl={Image3}
           title="Trims"
           description="Ecoboost, GT and GT Premium."
+=======
+          title="Card 1"
+          description="This is the first card component"
+        />
+        <Card
+          imageUrl={Image2}
+          title="Card 2"
+          description="This is the second card component"
+        />
+        <Card
+          imageUrl={Image3}
+          title="Card 3"
+          description="This is the third card component"
+>>>>>>> parent of 667a783 (cards)
         />
       </div>
       <Accordion />
