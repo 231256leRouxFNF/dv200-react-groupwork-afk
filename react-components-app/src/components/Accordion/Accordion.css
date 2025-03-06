@@ -1,17 +1,19 @@
-/* ================================
-   Dark & Blue Themed Accordion
-   ================================ */
-
 .accordion {
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
+    width: 780px;
+    max-width: none;
+    margin: 20px auto 40px auto;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #1e1e2e;
+    background-color: #0F0F0F;
     color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.4);
     transition: all 0.3s ease-in-out;
+    margin-bottom: 70px;
+}
+
+.accordion {
+    flex-grow: 1;
+    align-self: stretch;
 }
 
 /* Main Accordion Button */
@@ -21,36 +23,43 @@
     font-size: 18px;
     font-weight: bold;
     text-align: left;
-    background-color: #007bff;
+    background-color: #8B0116;
+    /* Red Accent */
     color: white;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px 8px 0 0;
+    margin-bottom: 5px;
 }
 
 /* Button Hover Effect */
 .accordion-toggle:hover {
-    background-color: #0056b3;
+    background-color: #BF0202;
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.6);
 }
 
 /* Expanding Content Section */
 .accordion-content {
-    background-color: #2a2a3b;
-    padding: 10px;
+    background-color: #1A1A1A;
+    /* Darker Black */
+    padding: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     animation: slideDown 0.3s ease-in-out;
+    margin-bottom: 10px;
+    border-radius: 0 0 8px 8px;
 }
 
 /* Buttons Inside the Accordion */
 .sub-option {
     padding: 12px;
-    background-color: #4da8ff;
+    background-color: #8B0116;
     border: none;
     color: white;
     font-size: 16px;
@@ -61,7 +70,7 @@
 
 /* Hover & Click Effects on Sub-Options */
 .sub-option:hover {
-    background-color: #007bff;
+    background-color: #BF0202;
     transform: scale(1.05);
 }
 
